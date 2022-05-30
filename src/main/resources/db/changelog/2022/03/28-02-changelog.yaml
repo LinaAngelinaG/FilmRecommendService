@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001
+      author: sam
+      changes:
+        - loadData:
+            tableName: user
+            commentLineStartsWith: //
+            encoding: UTF-8
+            file: users.csv
+            quotchar: ''''
+            relativeToChangelogFile: true
+            separator: ;
+            usePreparedStatements: true
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: login
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)

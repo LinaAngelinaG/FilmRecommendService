@@ -1,0 +1,8 @@
+databaseChangeLog:
+
+  - include:
+      file: 2022/03/28-01-changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 2022/03/28-02-changelog.yaml
+      relativeToChangelogFile: true
